@@ -65,7 +65,6 @@ proceedCommand.addEventListener('click', (e) => {
         if (posI.length != 0) {
             let lb = null
             let enmLb = document.getElementsByClassName('enm-stv')
-            console.log(enmLb[0])
             posI.forEach((i) => {
                 enmLb[i].style.background = `rgba(123, 236, 255, ${probBox[i]})`
             })

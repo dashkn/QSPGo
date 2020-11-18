@@ -76,7 +76,7 @@ function Turn(target, board) {
 
     switch (ship) {
         case 'DD':
-            bullet = Math.PI
+            bullet = Math.PI / 1
             break
         case 'CV':
             bullet = Math.PI / 2
