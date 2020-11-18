@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test for FlexBox</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="canvas">
+        <header class="canvas-item head">
+                <span class="head-item head-name">QPGo : Quantum Playground in Go</span>
+                <span class="head-item head-whitespace"></span>
+                <span class="head-item head-battleship">Battleship</span>
+                <span class="head-item head-shor">Shor</span>
+        </header>
+        <main class="canvas-item main">
+            <div class="main-bar"></div>
+            <div class="main-content">
+                <div class="main-content-item mci-demo">
+                    <div class="demo-item row-0">
+                            Quantum Battleship
+                    </div>
+                    <div class="demo-item row-1">
+                        <div class="r1-item r1i-enemy">
+                            <div class="enm-item enm-name">ENEMY STATUS</div>
+                            <div class="enm-item enm-status">
+                                <div class="enm-state enm-state-label">
+                                    <div class="enm-sl">000</div>
+                                    <div class="enm-sl">001</div>
+                                    <div class="enm-sl">010</div>
+                                    <div class="enm-sl">011</div>
+                                    <div class="enm-sl">100</div>
+                                    <div class="enm-sl">101</div>
+                                    <div class="enm-sl">110</div>
+                                    <div class="enm-sl">111</div>
+                                </div>
+                                <div class="enm-state enm-state-value">
+                                    <div class="enm-stv dfv"></div>
+                                    <div class="enm-stv dfv"></div>
+                                    <div class="enm-stv dfv"></div>
+                                    <div class="enm-stv dfv"></div>
+                                    <div class="enm-stv dfv"></div>
+                                    <div class="enm-stv dfv"></div>
+                                    <div class="enm-stv dfv"></div>
+                                    <div class="enm-stv dfv"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="r1-item r1i-map">
+                            <div class="water-pos" id="b0">
+                                <div class="water-item ship-pos">0</div>
+                                <div class="water-item crosshair b0">+</div>
+                                <div class="water-item b0 slt">LOCKED-ON</div>
+                            </div>
+                            <div class="land-pos">
+                                <div class="prop land"></div>
+                                <div class="prop water"></div>
+                                <div class="prop water lc"></div>
+                                <div class="prop water"></div>
+                                <div class="prop land"></div>
+                                <div class="prop land lc"></div>
+                                <div class="prop land lr"></div>
+                                <div class="prop water lr"></div>
+                                <div class="prop land lr lc"></div>
+                            </div>
+                            <div class="water-pos" id="b1">
+                                <div class="water-item ship-pos">1</div>
+                                <div class="water-item crosshair b1">+</div>
+                                <div class="water-item b1 slt">LOCKED-ON</div>
+                            </div>
+                            <div class="land-pos">
+                                <div class="prop land"></div>
+                                <div class="prop land"></div>
+                                <div class="prop land lc"></div>
+                                <div class="prop water"></div>
+                                <div class="prop water"></div>
+                                <div class="prop water lc"></div>
+                                <div class="prop land lr"></div>
+                                <div class="prop land lr"></div>
+                                <div class="prop land lr lc"></div>
+                            </div>
+                            <div
+                             class="water-pos " id="b2">
+                                <div class="water-item ship-pos">2</div>
+                                <div class="water-item crosshair b2">+</div>
+                                <div class="water-item b2 slt">LOCKED-ON</div>
+                            </div>
+                            <div class="land-pos">
+                                <div class="prop land"></div>
+                                <div class="prop land"></div>
+                                <div class="prop water lc"></div>
+                                <div class="prop water"></div>
+                                <div class="prop land"></div>
+                                <div class="prop land lc"></div>
+                                <div class="prop land lr"></div>
+                                <div class="prop water lr"></div>
+                                <div class="prop water lr lc"></div>
+                            </div>
+                            <div class="water-pos" id="b3">
+                                <div class="water-item ship-pos">3</div>
+                                <div class="water-item crosshair b3">+</div>
+                                <div class="water-item b3 slt">LOCKED-ON</div>
+                            </div>
+                            <div class="land-pos" id="b2">
+                                <div class="prop land"></div>
+                                <div class="prop water"></div>
+                                <div class="prop land"></div>
+                                <div class="prop land"></div>
+                                <div class="prop water"></div>
+                                <div class="prop land"></div>
+                                <div class="prop water lr"></div>
+                                <div class="prop land lr"></div>
+                                <div class="prop water lr"></div>
+                            </div>
+                            <div class="water-pos" id="b4">
+                                <div class="water-item ship-pos">4</div>
+                                <div class="water-item crosshair b4">+</div>
+                                <div class="water-item b4 slt">LOCKED-ON</div>
+                            </div>
+                        </div>
+                        <div class="r1-item r1i-player">
+                            <div class="ply-item ply-name">PLAYER STATUS</div>
+                            <div class="ply-item ply-status">
+                                <div class="ply-state ply-state-label">
+                                    <div class="ply-sl">000</div>
+                                    <div class="ply-sl">001</div>
+                                    <div class="ply-sl">010</div>
+                                    <div class="ply-sl">011</div>
+                                    <div class="ply-sl">100</div>
+                                    <div class="ply-sl">101</div>
+                                    <div class="ply-sl">110</div>
+                                    <div class="ply-sl">111</div>
+                                </div>
+                                <div class="ply-state ply-state-value">
+                                    <div class="ply-stv dfv" id="p000"></div>
+                                    <div class="ply-stv dfv" id="p001"></div>
+                                    <div class="ply-stv dfv" id="p010"></div>
+                                    <div class="ply-stv dfv" id="p011"></div>
+                                    <div class="ply-stv dfv" id="p100"></div>
+                                    <div class="ply-stv dfv" id="p101"></div>
+                                    <div class="ply-stv dfv" id="p110"></div>
+                                    <div class="ply-stv dfv" id="p111"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-item row-2">
+                        <div class="r2-item r2i-console"></div>
+                        <div class="r2-item r2i-command">
+                                <label class="command-item cbutton" for="p0" data-rad="#b0">0</label>
+                                <label class="command-item cbutton" for="p1" data-rad="#b1">1</label>
+                                <label class="command-item cbutton" for="p2" data-rad="#b2">2</label>
+                                <label class="command-item cbutton" for="p3" data-rad="#b3">3</label>
+                                <label class="command-item cbutton" for="p4" data-rad="#b4">4</label>
+                                <label class="command-item pbutton pButDisabled" for="proceed" data-clicked="proceed">PROCEED</label>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-bar">
+                <form action="" onsubmit="event.preventDefault()" method="get" id="ApplyBomb"></form>
+                    <input type="radio" name="command" value="0" id="p0" class="input-hide"></input>
+                    <input type="radio" name="command" value="1" id="p1" class="input-hide"></input>
+                    <input type="radio" name="command" value="2" id="p2" class="input-hide"></input>
+                    <input type="radio" name="command" value="3" id="p3" class="input-hide"></input>
+                    <input type="radio" name="command" value="4" id="p4" class="input-hide"></input>
+                    <input type="submit" name="proceed" value="proceed" id="proceed" class="input-hide"></input>
+                </form>
+            </div>
+        </main>
+        <footer class="canvas-item foot">
+                <span class="foot-item">under construction</span>
+        </footer>
+    </div>
+    <script src="quantum.js"></script>
+    <script src="battleship.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
